@@ -1,0 +1,21 @@
+{% extends 'report_gsm/Base.html' %}
+{% block content %}
+<table class="table">
+<thead>
+    <tr>
+        {%for one_head in data_head%}
+             <th scope="col">{{one_head}}</th>
+        {% endfor %}
+    </tr>
+<thead>
+<tbody>
+    {%for one_row in data_content%}
+        <tr>
+        {%for one_item in one_row%}
+            <th scope="row">{{one_item}}</th>
+        {% endfor %}   
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+{% endblock content %}
